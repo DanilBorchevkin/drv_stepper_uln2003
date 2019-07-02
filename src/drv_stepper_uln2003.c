@@ -75,7 +75,7 @@ err_stepper_uln2003_t STEPPER_ULN2003_Init(stepper_uln2003_t *stepper)
     __PopulateStates(stepper);
     stepper->current_state = 0;
 
-    return ret
+    return ret;
 }
 
 void STEPPER_ULN2003_Tick(stepper_uln2003_t *stepper)
