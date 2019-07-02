@@ -1,8 +1,10 @@
+#include <string.h>
 #include "drv_stepper_uln2003.h"
 
 static void __PopulateStates(stepper_uln2003_t * stepper)
 {
-    stepper->states_count = 4;
+    memset(stepper->states, 0x00, sizeof(stepper->states));
+    stepper->states_count = 0;
 
     // TODO clear states
     switch(stepper->mode)
